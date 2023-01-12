@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+}
+.main{
+    padding: 30px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav .logo {
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    padding-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    padding: 8px 12px;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 238, 1, 0.37);
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 0, 140, 0.466);
+}
+nav ul li:hover a::before{
+    width: 100%;
+    transition: all 0.5s ease;
+    mix-blend-mode: screen;
+}
+nav ul li:not(:hover) a::before{
+    width: 0;
+    transition: all 0.5s ease;
+}
+nav ul li:hover a::after{
+    width: 100%;
+    transition: all 0.5s ease;
+    mix-blend-mode: screen;
+}
+nav ul li:not(:hover) a::after{
+    width: 0;
+    transition: all 0.5s ease;
+}
+.container {
+    padding-top: 10vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.heading {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateY(100%);
+}
+
+.span-child {
+    line-height: 1.3;
+    font-size: 2.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+.button a{
+    color: #fff;
+    text-decoration: none;
+    border: 0px solid transparent;
+    padding: 10px 18px;
+    background-color: orangered;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.button a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 166, 0, 0.253);
+    width: 0px;
+    height: 0;
+}
+.button a:hover::before{
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.button a:not(:hover)::before{
+    width: 0;
+    transition: all 0.8s;
+}
+.button a i{
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+.button{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateY(100%);
+}
